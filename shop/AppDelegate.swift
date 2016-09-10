@@ -12,9 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    static var logged: Bool?
+    static var selectAddressId:Int?
+    static var selectTime:String?
+    static let cities = ["北京","上海","杭州市","广州市","深圳市","天津市"]
+    static var cityIndex = 0
+    static var purchaseForm:PurchaseForm?
+    //static let formatter = NSDateFormatter()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        window?.backgroundColor = UIColor.whiteColor()
+        //AppDelegate.formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+        //print("\(AppDelegate.formatter.stringFromDate(NSDate()))")
         // Override point for customization after application launch.
         return true
     }
